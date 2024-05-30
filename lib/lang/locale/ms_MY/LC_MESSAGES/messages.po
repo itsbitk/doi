@@ -880,7 +880,7 @@ msgstr ""
 #: admin/modules/bibliography/iframe_attach.php:127
 #: admin/modules/bibliography/index.php:734
 msgid "File Attachments"
-msgstr "Muat turun"
+msgstr "Fail Lampiran"
 
 #: admin/modules/bibliography/iframe_attach.php:127
 #: admin/modules/bibliography/iframe_item_list.php:123
