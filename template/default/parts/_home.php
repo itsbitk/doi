@@ -25,42 +25,7 @@
 </section>
 
 <div id="slims-home">
-<section class="mt-5 container">
-    <h4 class="text-secondary text-center text-thin mt-5 mb-4"><?php echo __('Select the topic you are interested in'); ?></h4>
-    <ul class="topic d-flex flex-wrap justify-content-center px-0">
-        <li class="d-flex justify-content-center align-items-center m-2">
-            <a href="index.php?callnumber=8&search=search" class="d-flex flex-column">
-                <img src="<?php echo assets('images/8-books.png'); ?>" width="80" class="mb-3 mx-auto"/>
-                <?php echo __('Literature'); ?>
-            </a>
-        </li>
-        <li class="d-flex justify-content-center align-items-center m-2">
-            <a href="index.php?callnumber=3&search=search" class="d-flex flex-column">
-                <img src="<?php echo assets('images/3-diploma.png'); ?>" width="80" class="mb-3 mx-auto"/>
-                <?php echo __('Social Sciences'); ?>
-            </a>
-        </li>
-        <li class="d-flex justify-content-center align-items-center m-2">
-            <a href="index.php?callnumber=6&search=search" class="d-flex flex-column">
-                <img src="<?php echo assets('images/6-blackboard.png'); ?>" width="80" class="mb-3 mx-auto"/>
-                <?php echo __('Applied Sciences'); ?>
-            </a>
-        </li>
-        <li class="d-flex justify-content-center align-items-center m-2">
-            <a href="index.php?callnumber=7&search=search" class="d-flex flex-column">
-                <img src="<?php echo assets('images/7-quill.png'); ?>" width="80" class="mb-3 mx-auto"/>
-                <?php echo __('Art & Recreation'); ?>
-            </a>
-        </li>
-        <li class="d-flex justify-content-center align-items-center m-2">
-            <a href="javascript:void(0)" class="d-flex flex-column" data-toggle="modal" data-target="#exampleModal">
-                <img src="<?php echo assets('images/icon/grid_icon.png'); ?>" width="80"
-                     class="mb-3 mx-auto"/>
-                <?php echo __('see more..'); ?>
-            </a>
-        </li>
-    </ul>
-</section>
+
 
 <?php if ($sysconf['template']['classic_popular_collection']) : ?>
 <section class="mt-5 container">

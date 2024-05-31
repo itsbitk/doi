@@ -7,25 +7,25 @@
 # @Last modified time: 2018-01-25T10:29:27+07:00
 
 $main_menus = [
+  'penyelidikan' => [
+    'text' => __('LAMAN UTAMA'),
+    'url' => 'https://apps.bitk.info/sdim'
+  ],
   'home' => [
-    'text' => __('Home'),
+    'text' => __('PENYELIDIKAN'),
     'url' => 'index.php'
   ],
   'libinfo' => [
-    'text' => __('Information'),
+    'text' => __('INFO'),
     'url' => 'index.php?p=libinfo'
   ],
   'news' => [
-    'text' => __('News'),
+    'text' => __('PANDUAN PENULIS'),
     'url' => 'index.php?p=news'
   ],
-  'help' => [
-    'text' => __('Help'),
-    'url' => 'index.php?p=help'
-  ],
   'librarian' => [
-    'text' => __('Librarian'),
-    'url' => 'index.php?p=librarian'
+    'text' => __('LOGIN'),
+    'url' => 'index.php?p=login'
   ]
 ];
 ?>
@@ -84,40 +84,7 @@ HTML;
             echo $menu_str;
           }
           ?>
-          <?php
-          $menu_member_active = isset($_GET['p']) && $_GET['p'] === 'member' ? 'active' : '';
-          if ($is_login) {
-            ?>
-              <li class="nav-item <?= $menu_member_active; ?>">
-                  <a class="nav-link" href="index.php?p=member&sec=title_basket">
-                      <i class="fas fa-shopping-basket"></i>
-                    <?php
-                    $count_basket = count($_SESSION['m_mark_biblio']);
-                    ?>
-                      <sup id="count-basket" class="badge badge-danger"><?php echo $count_basket; ?></sup>
-                  </a>
-              </li>
-              <li class="nav-item dropdown <?= $menu_member_active; ?>">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                     aria-haspopup="true" aria-expanded="false">
-                      <img class="w-6 h-6 rounded-full ml-2 mr-2"
-                           src="<?php echo $member_image_path; ?>"
-                           alt="Avatar of Jonathan Reinink">
-                    <?php echo $_SESSION['m_name']; ?>
-                  </a>
-                  <div class="dropdown-menu dropdown-menu-right">
-                      <a class="dropdown-item" href="index.php?p=member"><i class="fas fa-user-circle mr-3"></i> <?= __('Profile');?></a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="index.php?p=member&sec=bookmark"><i class="fas fa-bookmark mr-3"></i> <?= __('Bookmark');?></a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="index.php?p=member&logout=1"><i class="fas fa-sign-out-alt mr-3"></i> <?= __('Logout'); ?></a>
-                  </div>
-              </li>
-          <?php } else { ?>
-              <li class="nav-item <?= $menu_member_active; ?>">
-                  <a class="nav-link" href="index.php?p=member"><?= __('Member Area') ?></a>
-              </li>
-          <?php } ?>
+
             <li class="nav-item dropdown">
               <?php
               $langstr = '';
